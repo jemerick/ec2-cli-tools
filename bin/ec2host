@@ -26,7 +26,7 @@ Prints server host name.
   -k, --aws-key KEY          Amazon EC2 Key, defaults to ENV[AWS_ACCESS_KEY_ID]
   -s, --aws-secret SECRET    Amazon EC2 Secret, defaults to ENV[AWS_SECRET_ACCESS_KEY]
   -r, --region REGION        Amazon EC2 Region, defaults to us-east-1 or ENV[AWS_EC2_REGION]
-  -t, --tag TAG              Tag name for searching, defaults to 'Name'"""
+  -t, --tag TAG              Tag name for searching, defaults to 'opsworks:instance'"""
 
 
 def ec2_active_instances(label_tag, filters):

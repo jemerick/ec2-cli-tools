@@ -37,7 +37,7 @@ def get_instances_for_query(ec2_conn, query):
 
     # instance name
     if len(filters) == 0:
-        filters["tag:Name"] = args.query
+        filters["tag:opsworks:instance"] = args.query
 
     reservations = ec2_conn.get_all_instances(filters=filters)
     all_instances = [i for r in reservations for i in r.instances]
@@ -48,7 +48,7 @@ def get_instances_for_query(ec2_conn, query):
 
 def print_instance_info(instance):
     print "\t".join([
-        instance.tags.get("Name", "(None)"),
+        instance.tags.get("opsworks:instance", "(None)"),
         instance.id,
         instance.placement,
         instance.private_ip_address,

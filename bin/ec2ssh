@@ -7,14 +7,14 @@ usage() {
 Usage: ec2-ssh [-k KEY] [-s SECRET] [-r REGION] [-t TAG] <instance-name>
 
 Open an ssh connection to an EC2 instance where <instance-name>=tag:value.
-The 'tag:' portion of <instance-name> is optional, and defaults to 'Name'.
+The 'tag:' portion of <instance-name> is optional, and defaults to 'opsworks:instance'.
 For a list of instances, run ec2-host without any paramteres
 
   -h            display this help and exit
   -k, KEY       Amazon EC2 Key, defaults to \$AWS_ACCESS_KEY_ID
   -s, SECRET    Amazon EC2 Secret, defaults to \$AWS_SECRET_ACCESS_KEY
   -r, REGION    Amazon EC2 Region, defaults to us-east-1
-  -t, TAG       Tag name for searching, defaults to 'Name'
+  -t, TAG       Tag name for searching, defaults to 'opsworks:instance'
 EOF
 }
 
