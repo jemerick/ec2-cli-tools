@@ -58,7 +58,7 @@ def main(argv):
     aws_key = os.environ.get("AWS_ACCESS_KEY_ID")
     aws_secret = os.environ.get("AWS_SECRET_ACCESS_KEY")
     region = os.environ.get("AWS_EC2_REGION")
-    tag = "Name"
+    tag = "opsworks:instance"
 
     for opt, arg in opts:
         if opt in ("-h", "--help"):
